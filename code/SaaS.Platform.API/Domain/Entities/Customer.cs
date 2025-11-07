@@ -26,7 +26,7 @@ namespace SaaS.Platform.API.Domain.Entities
         public string? PostalCode { get; set; }
         public string? TaxId { get; set; }
         public string? CustomerSegment { get; set; }
-        public string CustomerStatus { get; set; } = "Active"; // Active, Inactive, Blocked
+        public string CustomerStatus { get; set; } = "Active"; // Active, Inactive, Blocked, Others
         public Guid? AssignedUserId { get; set; }
         public string? CustomerSource { get; set; }
         public string? Tags { get; set; }
