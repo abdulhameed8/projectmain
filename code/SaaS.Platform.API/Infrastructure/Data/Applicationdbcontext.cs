@@ -16,6 +16,8 @@ namespace SaaS.Platform.API.Infrastructure.Data
         // DbSets for entities
         public DbSet<Customer> Customers { get; set; }
 
+        public DbSet<Tenant> Tenants { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
