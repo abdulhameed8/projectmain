@@ -18,6 +18,8 @@ namespace SaaS.Platform.API.Infrastructure.Data
 
         public DbSet<Tenant> Tenants { get; set; }
 
+        public DbSet<User> Users { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

@@ -10,6 +10,8 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         ICustomerRepository Customers { get; }
 
         ITenantRepository Tenants { get; }
+
+        IUserRepository Users { get; }
         // Add other repositories as needed
         // IUserRepository Users { get; }
         // ILeadRepository Leads { get; }
