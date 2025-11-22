@@ -58,9 +58,9 @@ namespace SaaS.Platform.API.Application.Validators
     /// <summary>
     /// Validator for UpdateUserDto with business rules
     /// </summary>
-    public class UpdateUserDtoValidator : AbstractValidator<UpdateUserdto>
+    public class UpdateUserdtoValidator : AbstractValidator<UpdateUserdto>
     {
-        public UpdateUserDtoValidator()
+        public UpdateUserdtoValidator()
         {
             RuleFor(x => x.FirstName)
                 .MaximumLength(100)

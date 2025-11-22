@@ -18,6 +18,7 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         private ICustomerRepository? _customerRepository;
         private ITenantRepository? _tenantRepository;
         private IUserRepository? _userRepository;
+        private IUserRolesRepository? _userRolesRepository;
 
         public UnitOfWork(ApplicationDbContext context)
         {
@@ -54,6 +55,15 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
             }
         }
 
+
+        public IUserRolesRepository UserRoles
+        {
+            get
+            {
+                _userRolesRepository ??= new UserRolesRepository(_context);
+                return _userRolesRepository;
+            }
+        }
 
 
         // Add other repositories as properties following the same pattern

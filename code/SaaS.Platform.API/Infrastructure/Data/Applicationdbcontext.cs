@@ -20,6 +20,8 @@ namespace SaaS.Platform.API.Infrastructure.Data
 
         public DbSet<User> Users { get; set; }
 
+        public DbSet<UserRoles> UserRoles { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

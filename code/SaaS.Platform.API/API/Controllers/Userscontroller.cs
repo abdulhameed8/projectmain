@@ -2,7 +2,6 @@
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using SaaS.Platform.API.Application.Common;
-using SaaS.Platform.API.Application.DTOs.Customer;
 using SaaS.Platform.API.Application.DTOs.Users;
 using SaaS.Platform.API.Domain.Entities;
 using SaaS.Platform.API.Infrastructure.UnitOfWork;
@@ -72,7 +71,7 @@ namespace SaaS.Platform.API.API.Controllers
                     return BadRequest(new ApiResponse<object>("Invalid pagination parameters"));
                 }
 
-                var (users, totalCount) = await _unitOfWork.Users.GetUsersPagedAsync(
+                var (users, totalCount) = await _unitOfWork.UserRoles.GetUsersPagedAsync(
                     tenantId, searchTerm, pageNumber, pageSize);
 
                 var userDtos = _mapper.Map<List<Userdto>>(users);
@@ -106,7 +105,7 @@ namespace SaaS.Platform.API.API.Controllers
             {
                 _logger.LogInformation("Fetching user with ID: {UserId}", id);
 
-                var user = await _unitOfWork.Users.GetByIdAsync(id);
+                var user = await _unitOfWork.UserRoles.GetByIdAsync(id);
 
                 if (user == null)
                 {
@@ -162,7 +161,7 @@ namespace SaaS.Platform.API.API.Controllers
                 user.CreatedDate = DateTime.UtcNow;
 
                 // Add to database
-                await _unitOfWork.Users.AddAsync(user);
+                await _unitOfWork.UserRoles.AddAsync(user);
                 await _unitOfWork.SaveChangesAsync();
 
                 var userDto = _mapper.Map<Userdto>(user);
@@ -211,7 +210,7 @@ namespace SaaS.Platform.API.API.Controllers
                 }
 
                 // Get existing user
-                var existingUser = await _unitOfWork.Users.GetByIdAsync(id);
+                var existingUser = await _unitOfWork.UserRoles.GetByIdAsync(id);
                 if (existingUser == null)
                 {
                     _logger.LogWarning("User {TenantId} not found", id);
@@ -236,7 +235,7 @@ namespace SaaS.Platform.API.API.Controllers
 
                 existingUser.ModifiedDate = DateTime.UtcNow;
 
-                _unitOfWork.Users.Update(existingUser);
+                _unitOfWork.UserRoles.Update(existingUser);
                 await _unitOfWork.SaveChangesAsync();
 
                 var userDto = _mapper.Map<Userdto>(existingUser);
@@ -266,7 +265,7 @@ namespace SaaS.Platform.API.API.Controllers
             {
                 _logger.LogInformation("Deleting user {TenantId}", id);
 
-                var user = await _unitOfWork.Users.GetByIdAsync(id);
+                var user = await _unitOfWork.UserRoles.GetByIdAsync(id);
                 if (user == null)
                 {
                     _logger.LogWarning("User {TenantId} not found", id);
@@ -278,7 +277,7 @@ namespace SaaS.Platform.API.API.Controllers
                
                 user.ModifiedDate = DateTime.UtcNow;
 
-                _unitOfWork.Users.Update(user);
+                _unitOfWork.UserRoles.Update(user);
                 await _unitOfWork.SaveChangesAsync();
 
                 _logger.LogInformation("Successfully deleted user {TenantId}", id);
@@ -320,7 +319,7 @@ namespace SaaS.Platform.API.API.Controllers
                     return BadRequest(new ApiResponse<object>("Search term is required"));
                 }
 
-                var users = await _unitOfWork.Users.SearchUsersAsync(tenantId, searchTerm);
+                var users = await _unitOfWork.UserRoles.SearchUsersAsync(tenantId, searchTerm);
                 var userDtos = _mapper.Map<List<Userdto>>(users);
 
                 _logger.LogInformation("Found {Count} user matching search term", userDtos.Count);
@@ -353,7 +352,7 @@ namespace SaaS.Platform.API.API.Controllers
                     return BadRequest(new ApiResponse<object>("Tenant ID is required"));
                 }
 
-                var users = await _unitOfWork.Users.GetActiveUsersAsync(tenantId);
+                var users = await _unitOfWork.UserRoles.GetActiveUsersAsync(tenantId);
                 var userDtos = _mapper.Map<List<Userdto>>(users);
 
                 _logger.LogInformation("Successfully retrieved {Count} active users", userDtos.Count);
