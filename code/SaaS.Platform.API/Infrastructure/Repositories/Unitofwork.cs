@@ -14,11 +14,18 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         private IDbContextTransaction? _transaction;
         private bool _disposed;
 
+
+
         // Repository instances
         private ICustomerRepository? _customerRepository;
         private ITenantRepository? _tenantRepository;
         private IUserRepository? _userRepository;
         private IUserRolesRepository? _userRolesRepository;
+        private ISubscriptionsPlanRepository?  _subscriptionPlanRepository;
+        private IRolesRepository? _rolesRepository;
+
+
+
 
         public UnitOfWork(ApplicationDbContext context)
         {
@@ -64,6 +71,31 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
                 return _userRolesRepository;
             }
         }
+
+
+        public ISubscriptionsPlanRepository SubscriptionsPlans
+        {
+            get
+            {
+                _subscriptionPlanRepository ??= new SubscriptionsPlanRepository(_context);
+                return _subscriptionPlanRepository;
+            }
+        }
+
+
+
+        public IRolesRepository Roles
+        {
+            get
+            {
+                _rolesRepository ??= new RolesRepository(_context);
+                return _rolesRepository;
+            }
+        }
+
+
+
+
 
 
         // Add other repositories as properties following the same pattern

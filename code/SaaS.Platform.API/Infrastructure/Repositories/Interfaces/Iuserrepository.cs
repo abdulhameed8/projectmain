@@ -13,9 +13,9 @@ namespace SaaS.Platform.API.Infrastructure.Repositories.Interfaces
         
         Task<IEnumerable<User>> SearchUsersAsync(Guid tenantId, string searchTerm);
         Task<(IEnumerable<User> Items, int TotalCount)> GetUsersPagedAsync(
-            Guid tenantId,
-            string? searchTerm = null, 
-            int pageNumber = 1,
-            int pageSize = 10);
+             Guid tenantId,
+             string? searchTerm = null,
+             int pageNumber = 1,
+             int pageSize = 10);
     }
 }

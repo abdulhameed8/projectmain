@@ -15,8 +15,7 @@
         public string? LastName { get; set; }
         public string? PhoneNumber { get; set; }
         public string? ProfileImageUrl { get; set; }
-        public bool? IsActive { get; set; } = true;
-
+       
         public string? IsEmailVerified { get; set; }
 
         public string? EmailVerificationToken { get; set; }
@@ -51,7 +50,7 @@
         public string? LastName { get; set; }
         public string? PhoneNumber { get; set; }
         public string? ProfileImageUrl { get; set; }
-        public bool? IsActive { get; set; } = true;
+        public bool? IsActive { get; set; } 
 
         public string? IsEmailVerified { get; set; }
 
@@ -91,7 +90,7 @@
         public string? LastName { get; set; }
         public string? PhoneNumber { get; set; }
         public string? ProfileImageUrl { get; set; }
-        public bool? IsActive { get; set; } = true;
+        public bool? IsActive { get; set; } 
 
         public string? IsEmailVerified { get; set; }
 

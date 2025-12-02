@@ -1,5 +1,6 @@
 ﻿using Microsoft.EntityFrameworkCore;
 using SaaS.Platform.API.Domain.Entities;
+using SaaS.Platform.API.Domain.Entities.Roles.cs;
 
 namespace SaaS.Platform.API.Infrastructure.Data
 {
@@ -21,6 +22,10 @@ namespace SaaS.Platform.API.Infrastructure.Data
         public DbSet<User> Users { get; set; }
 
         public DbSet<UserRoles> UserRoles { get; set; }
+
+        public DbSet<SubscriptionsPlan> SubscriptionsPlans { get; set; }
+
+        public DbSet<Roles> Roles { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
