@@ -23,8 +23,8 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         private IUserRolesRepository? _userRolesRepository;
         private ISubscriptionsPlanRepository?  _subscriptionPlanRepository;
         private IRolesRepository? _rolesRepository;
-
-
+        private IPermissionRepository? _permissionrepository;
+            
 
 
         public UnitOfWork(ApplicationDbContext context)
@@ -93,6 +93,14 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
             }
         }
 
+        public IPermissionRepository Permissions
+        {
+            get
+            {
+                _permissionrepository ??= new PermissionRepository(_context);
+                return _permissionrepository;
+            }
+        }
 
 
 

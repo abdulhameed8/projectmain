@@ -18,7 +18,8 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         ISubscriptionsPlanRepository SubscriptionsPlans { get; }
 
         IRolesRepository Roles { get; }
-
+         
+        IPermissionRepository Permissions { get; }
 
 
         // Add other repositories as needed

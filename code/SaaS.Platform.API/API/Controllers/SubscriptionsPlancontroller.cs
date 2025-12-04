@@ -131,7 +131,7 @@ namespace SaaS.Platform.API.API.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error occurred while updating customer {CustomerId}", id);
+                _logger.LogError(ex, "Error occurred while updating subscriptionPlan {SubscriptionsPlanId}", id);
                 throw;
             }
         }
