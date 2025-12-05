@@ -29,6 +29,8 @@ namespace SaaS.Platform.API.Infrastructure.Data
 
         public DbSet<Permissions> Permissions { get; set; }
 
+        public DbSet<RolePermissions> RolePermissions { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

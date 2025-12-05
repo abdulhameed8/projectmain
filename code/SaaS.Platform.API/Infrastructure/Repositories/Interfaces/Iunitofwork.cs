@@ -21,6 +21,8 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
          
         IPermissionRepository Permissions { get; }
 
+        IRolePermissionsrepository RolePermissions { get; }
+
 
         // Add other repositories as needed
         // IUserRepository Users { get; }

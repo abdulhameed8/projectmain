@@ -23,7 +23,8 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         private IUserRolesRepository? _userRolesRepository;
         private ISubscriptionsPlanRepository?  _subscriptionPlanRepository;
         private IRolesRepository? _rolesRepository;
-        private IPermissionRepository? _permissionrepository;
+        private IPermissionRepository? _permissionRepository;
+        private IRolePermissionsrepository? _rolePermissionsRepository;
             
 
 
@@ -97,8 +98,17 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         {
             get
             {
-                _permissionrepository ??= new PermissionRepository(_context);
-                return _permissionrepository;
+                _permissionRepository ??= new PermissionRepository(_context);
+                return _permissionRepository;
+            }
+        }
+
+        public IRolePermissionsrepository  RolePermissions
+        {
+            get
+            {
+                _rolePermissionsRepository ??= new RolePermissionsRepository(_context);
+                return _rolePermissionsRepository;
             }
         }
 
