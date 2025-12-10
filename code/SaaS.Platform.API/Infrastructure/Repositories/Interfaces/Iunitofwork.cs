@@ -23,6 +23,8 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
 
         IRolePermissionsrepository RolePermissions { get; }
 
+        IAuditLogsRepository AuditLogs { get; }
+
 
         // Add other repositories as needed
         // IUserRepository Users { get; }

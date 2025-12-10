@@ -31,6 +31,8 @@ namespace SaaS.Platform.API.Infrastructure.Data
 
         public DbSet<RolePermissions> RolePermissions { get; set; }
 
+        public DbSet<AuditLogs> AuditLogs { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

@@ -25,6 +25,7 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         private IRolesRepository? _rolesRepository;
         private IPermissionRepository? _permissionRepository;
         private IRolePermissionsrepository? _rolePermissionsRepository;
+        private IAuditLogsRepository? _auditLogsRepository;
             
 
 
@@ -112,6 +113,15 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
             }
         }
 
+
+        public IAuditLogsRepository AuditLogs
+        {
+            get
+            {
+                _auditLogsRepository ??= new AuditLogsRepository(_context);
+                return _auditLogsRepository;
+            }
+        }
 
 
 
