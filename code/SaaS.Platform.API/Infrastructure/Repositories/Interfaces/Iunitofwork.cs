@@ -25,6 +25,10 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
 
         IAuditLogsRepository AuditLogs { get; }
 
+        ILeadsRepository Leads { get; }
+
+        IOpportunityRepository Opportunity { get; }
+
 
         // Add other repositories as needed
         // IUserRepository Users { get; }

@@ -26,6 +26,8 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         private IPermissionRepository? _permissionRepository;
         private IRolePermissionsrepository? _rolePermissionsRepository;
         private IAuditLogsRepository? _auditLogsRepository;
+        private ILeadsRepository? _leadsRepository;
+        private IOpportunityRepository? _opportunityRepository;
             
 
 
@@ -123,6 +125,23 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
             }
         }
 
+        public ILeadsRepository Leads
+        {
+            get
+            {
+                _leadsRepository ??= new LeadsRepository(_context);
+                return _leadsRepository;
+            }
+        }
+
+        public IOpportunityRepository Opportunity
+        {
+            get
+            {
+                _opportunityRepository ??= new OpportunityRepository(_context);
+                return _opportunityRepository;
+            }
+        }
 
 
 

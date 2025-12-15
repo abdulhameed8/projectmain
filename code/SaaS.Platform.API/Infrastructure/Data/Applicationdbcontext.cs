@@ -33,6 +33,10 @@ namespace SaaS.Platform.API.Infrastructure.Data
 
         public DbSet<AuditLogs> AuditLogs { get; set; }
 
+        public DbSet<Leads> Leads { get; set; }
+
+        public DbSet<Opportunities> Opportunities { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
