@@ -28,6 +28,7 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         private IAuditLogsRepository? _auditLogsRepository;
         private ILeadsRepository? _leadsRepository;
         private IOpportunityRepository? _opportunityRepository;
+        private IActivityRepository? _activityRepository;
             
 
 
@@ -142,6 +143,16 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
                 return _opportunityRepository;
             }
         }
+
+        public IActivityRepository Activity
+        {
+            get
+            {
+                _activityRepository ??= new ActivityRepository(_context);
+                return _activityRepository;
+            }
+        }
+
 
 
 

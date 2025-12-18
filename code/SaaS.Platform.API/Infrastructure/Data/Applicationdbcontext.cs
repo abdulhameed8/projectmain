@@ -37,6 +37,8 @@ namespace SaaS.Platform.API.Infrastructure.Data
 
         public DbSet<Opportunities> Opportunities { get; set; }
 
+        public DbSet<Activities> Activities { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

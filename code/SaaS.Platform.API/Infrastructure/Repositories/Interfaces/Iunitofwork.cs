@@ -29,6 +29,8 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
 
         IOpportunityRepository Opportunity { get; }
 
+        IActivityRepository Activity { get; }
+
 
         // Add other repositories as needed
         // IUserRepository Users { get; }
