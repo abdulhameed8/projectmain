@@ -29,6 +29,8 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         private ILeadsRepository? _leadsRepository;
         private IOpportunityRepository? _opportunityRepository;
         private IActivityRepository? _activityRepository;
+        private INoteRepository? _noteRepository;
+        private IDocumentsRepository? _documentsRepository;
             
 
 
@@ -150,6 +152,24 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
             {
                 _activityRepository ??= new ActivityRepository(_context);
                 return _activityRepository;
+            }
+        }
+
+        public INoteRepository Note
+        {
+            get
+            {
+                _noteRepository ??= new NoteRepository(_context);
+                return _noteRepository;
+            }
+        }
+
+        public IDocumentsRepository Documents
+        {
+            get
+            {
+                _documentsRepository ??= new DocumentsRepository(_context);
+                return _documentsRepository;
             }
         }
 

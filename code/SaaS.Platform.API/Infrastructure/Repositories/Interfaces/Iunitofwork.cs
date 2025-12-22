@@ -31,6 +31,10 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
 
         IActivityRepository Activity { get; }
 
+        INoteRepository Note { get; }
+
+        IDocumentsRepository Documents { get; }
+
 
         // Add other repositories as needed
         // IUserRepository Users { get; }
