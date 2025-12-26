@@ -9,7 +9,7 @@ using SaaS.Platform.API.Infrastructure.UnitOfWork;
 namespace SaaS.Platform.API.API.Controllers
 {
     /// <summary>
-    /// Campaign management API controller
+    /// Campaigns management API controller
     /// </summary>
     [ApiController]
     [Route("api/v1/[controller]")]
