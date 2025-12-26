@@ -35,6 +35,7 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
 
         IDocumentsRepository Documents { get; }
 
+        ICampaignRepository Campaigns { get; }
 
         // Add other repositories as needed
         // IUserRepository Users { get; }

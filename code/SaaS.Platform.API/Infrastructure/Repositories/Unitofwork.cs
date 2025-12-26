@@ -31,6 +31,7 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         private IActivityRepository? _activityRepository;
         private INoteRepository? _noteRepository;
         private IDocumentsRepository? _documentsRepository;
+        private ICampaignRepository? _campaignRepository;
             
 
 
@@ -173,7 +174,14 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
             }
         }
 
-
+        public ICampaignRepository Campaigns
+        {
+            get
+            {
+                _campaignRepository ??= new CampaignRepository(_context);
+                return _campaignRepository;
+            }
+        }
 
 
         // Add other repositories as properties following the same pattern
