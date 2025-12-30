@@ -32,6 +32,7 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         private INoteRepository? _noteRepository;
         private IDocumentsRepository? _documentsRepository;
         private ICampaignRepository? _campaignRepository;
+        private ICallDispositionRepository? _callDispositionRepository;
             
 
 
@@ -183,6 +184,14 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
             }
         }
 
+        public ICallDispositionRepository CallDispositions
+        {
+            get
+            {
+                _callDispositionRepository ??= new CallDispositionRepository(_context);
+                return _callDispositionRepository;
+            }
+        }
 
         // Add other repositories as properties following the same pattern
         // public IUserRepository Users => _userRepository ??= new UserRepository(_context);

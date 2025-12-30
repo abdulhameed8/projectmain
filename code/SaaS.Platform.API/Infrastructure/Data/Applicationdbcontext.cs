@@ -45,6 +45,8 @@ namespace SaaS.Platform.API.Infrastructure.Data
 
         public DbSet<Campaigns> Campaigns { get; set; }
 
+        public DbSet<CallDispositions> CallDispositions { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
