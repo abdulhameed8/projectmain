@@ -47,6 +47,8 @@ namespace SaaS.Platform.API.Infrastructure.Data
 
         public DbSet<CallDispositions> CallDispositions { get; set; }
 
+        public DbSet<Queues> Queues { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

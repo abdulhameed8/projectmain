@@ -39,6 +39,8 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
 
         ICallDispositionRepository CallDispositions { get; }
 
+        IQueueRepository Queues { get; }
+
         // Add other repositories as needed
         // IUserRepository Users { get; }
         // ILeadRepository Leads { get; }

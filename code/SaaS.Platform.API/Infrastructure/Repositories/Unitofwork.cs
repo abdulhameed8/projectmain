@@ -33,6 +33,7 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         private IDocumentsRepository? _documentsRepository;
         private ICampaignRepository? _campaignRepository;
         private ICallDispositionRepository? _callDispositionRepository;
+        private IQueueRepository? _queueRepository;
             
 
 
@@ -192,6 +193,20 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
                 return _callDispositionRepository;
             }
         }
+
+
+        public IQueueRepository Queues
+        {
+            get
+            {
+                _queueRepository ??= new QueueRepository(_context);
+                return _queueRepository;
+            }
+        }
+
+
+
+
 
         // Add other repositories as properties following the same pattern
         // public IUserRepository Users => _userRepository ??= new UserRepository(_context);
