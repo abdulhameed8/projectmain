@@ -49,6 +49,8 @@ namespace SaaS.Platform.API.Infrastructure.Data
 
         public DbSet<Queues> Queues { get; set; }
 
+        public DbSet<Agents> Agents { get; set; }
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

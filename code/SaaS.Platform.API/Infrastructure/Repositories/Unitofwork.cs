@@ -34,6 +34,7 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         private ICampaignRepository? _campaignRepository;
         private ICallDispositionRepository? _callDispositionRepository;
         private IQueueRepository? _queueRepository;
+        private IAgentRepository?  _agentRepository;
             
 
 
@@ -203,6 +204,16 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
                 return _queueRepository;
             }
         }
+
+        public IAgentRepository Agents
+        {
+            get
+            {
+                _agentRepository ??= new AgentRepository(_context);
+                return _agentRepository;
+            }
+        }
+
 
 
 
