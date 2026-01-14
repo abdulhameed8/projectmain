@@ -2,7 +2,7 @@
 
 namespace SaaS.Platform.API.Application.DTOs.Agents
 {
-    public class CreateAgentdto
+    public class CreateAgentQueuesdto
     {
         public Guid AgentId { get; set; }
         public Guid TenantId { get; set; }
@@ -17,7 +17,7 @@ namespace SaaS.Platform.API.Application.DTOs.Agents
 
 
     }
-    public class UpdateAgentdto
+    public class UpdateAgentQueuesdto
     {
         
         public required string Extension { get; set; }

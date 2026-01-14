@@ -35,6 +35,7 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         private ICallDispositionRepository? _callDispositionRepository;
         private IQueueRepository? _queueRepository;
         private IAgentRepository?  _agentRepository;
+        private IAgentQueuesRepository? _agentQueuesRepository;
             
 
 
@@ -213,6 +214,16 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
                 return _agentRepository;
             }
         }
+
+        public IAgentQueuesRepository AgentQueues
+        {
+            get
+            {
+                _agentQueuesRepository ??= new AgentQueuesRepository(_context);
+                return _agentQueuesRepository;
+            }
+        }
+
 
 
 

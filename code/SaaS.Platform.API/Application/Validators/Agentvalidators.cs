@@ -6,7 +6,7 @@ namespace SaaS.Platform.API.Application.Validators
     /// <summary>
     /// Validator for CreateAgentdto with business rules
     /// </summary>
-    public class CreateAgentdtoValidator : AbstractValidator<CreateAgentdto>
+    public class CreateAgentdtoValidator : AbstractValidator<CreateAgentQueuesdto>
     {
         public CreateAgentdtoValidator()
         {
@@ -35,7 +35,7 @@ namespace SaaS.Platform.API.Application.Validators
     /// <summary>
     /// Validator for UpdateAgentdto with business rules
     /// </summary>
-    public class UpdateAgentdtoValidator : AbstractValidator<UpdateAgentdto>
+    public class UpdateAgentdtoValidator : AbstractValidator<UpdateAgentQueuesdto>
     {
         public UpdateAgentdtoValidator()
         {

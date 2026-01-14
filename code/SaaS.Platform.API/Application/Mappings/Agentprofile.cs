@@ -13,7 +13,7 @@ namespace SaaS.Platform.API.Application.Mappings
         {
             
             // Create DTO to Entity
-            CreateMap<CreateAgentdto, Agents>()
+            CreateMap<CreateAgentQueuesdto, Agents>()
                 .ForMember(dest => dest.AgentId, opt => opt.Ignore())
                 .ForMember(dest => dest.CreatedDate, opt => opt.Ignore())
                 .ForMember(dest => dest.CreatedBy, opt => opt.Ignore())
@@ -22,7 +22,7 @@ namespace SaaS.Platform.API.Application.Mappings
                 .ForMember(dest => dest.IsActive, opt => opt.MapFrom(src => true));
 
             // Update DTO to Entity
-            CreateMap<UpdateAgentdto, Agents>()
+            CreateMap<UpdateAgentQueuesdto, Agents>()
                 .ForAllMembers(opts => opts.Condition((src, dest, srcMember) => srcMember != null));
         }
     }

@@ -19,15 +19,15 @@ namespace SaaS.Platform.API.API.Controllers
         private readonly IUnitOfWork _unitOfWork;
         private readonly IMapper _mapper;
         private readonly ILogger<AgentsController> _logger;
-        private readonly IValidator<CreateAgentdto> _createValidator;
-        private readonly IValidator<UpdateAgentdto> _updateValidator;
+        private readonly IValidator<CreateAgentQueuesdto> _createValidator;
+        private readonly IValidator<UpdateAgentQueuesdto> _updateValidator;
 
         public AgentsController(
             IUnitOfWork unitOfWork,
             IMapper mapper,
             ILogger<AgentsController> logger,
-            IValidator<CreateAgentdto> createValidator,
-            IValidator<UpdateAgentdto> updateValidator)
+            IValidator<CreateAgentQueuesdto> createValidator,
+            IValidator<UpdateAgentQueuesdto> updateValidator)
         {
             _unitOfWork = unitOfWork;
             _mapper = mapper;
@@ -180,7 +180,7 @@ namespace SaaS.Platform.API.API.Controllers
         [HttpPost]
         [ProducesResponseType(typeof(ApiResponse<Agentdto>), StatusCodes.Status201Created)]
         [ProducesResponseType(typeof(ApiResponse<object>), StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<ApiResponse<Agentdto>>> CreateAgent([FromBody] CreateAgentdto createAgentdto)
+        public async Task<ActionResult<ApiResponse<Agentdto>>> CreateAgent([FromBody] CreateAgentQueuesdto createAgentdto)
         {
             try
             {
@@ -246,7 +246,7 @@ namespace SaaS.Platform.API.API.Controllers
         [ProducesResponseType(typeof(ApiResponse<object>), StatusCodes.Status404NotFound)]
         public async Task<ActionResult<ApiResponse<Agentdto>>> UpdateAgent(
             Guid id,
-            [FromBody] UpdateAgentdto updateAgentdto)
+            [FromBody] UpdateAgentQueuesdto updateAgentdto)
         {
             try
             {
