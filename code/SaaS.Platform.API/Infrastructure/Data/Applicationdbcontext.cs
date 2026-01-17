@@ -52,6 +52,7 @@ namespace SaaS.Platform.API.Infrastructure.Data
         public DbSet<Agents> Agents { get; set; }
         public DbSet<AgentQueues> AgentsQueues { get; set; }
         public DbSet<CallRecord> CallRecord { get; set; }
+        public DbSet<CallRecordings> CallRecordings { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

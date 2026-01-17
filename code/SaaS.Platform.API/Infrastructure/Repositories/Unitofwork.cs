@@ -37,6 +37,7 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         private IAgentRepository?  _agentRepository;
         private IAgentQueuesRepository? _agentQueuesRepository;
         private ICallRecordRepository? _callRecordRepository;
+        private ICallRecordingRepository? _callRecordingRepository;
             
 
 
@@ -234,6 +235,14 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
             }
         }
 
+        public ICallRecordingRepository CallRecordings
+        {
+            get
+            {
+                _callRecordingRepository ??= new CallRecordingRepository(_context);
+                return _callRecordingRepository;
+            }
+        }
 
 
 

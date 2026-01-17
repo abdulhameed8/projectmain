@@ -1314,3 +1314,31 @@ PRINT '6. Subscription & Billing (6 tables)';
 PRINT '7. Workflow Management (4 tables)';
 PRINT '8. Notifications (2 tables)';
 PRINT '9. System Configuration (2 tables)';
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+     
+
+
+
+
+
+
+
+
