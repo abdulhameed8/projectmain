@@ -38,6 +38,10 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         private IAgentQueuesRepository? _agentQueuesRepository;
         private ICallRecordRepository? _callRecordRepository;
         private ICallRecordingRepository? _callRecordingRepository;
+        private IIVRFlowsRepository? _iVRFlowsRepository;
+        private IIVRPromptsRepository? _iVRPromptsRepository;
+        private IIVRMenusRepository? _iVRMenusRepository;
+        private IIVRMenusOptionsRepository? _iVRMenusOptionsRepository;
             
 
 
@@ -244,7 +248,41 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
             }
         }
 
+        public IIVRFlowsRepository IVRFlows
+        {
+            get
+            {
+                _iVRFlowsRepository ??= new IVRFlowsRepository(_context);
+                return _iVRFlowsRepository;
+            }
+        }
 
+        public IIVRPromptsRepository IVRPrompts
+        {
+            get
+            {
+                _iVRPromptsRepository ??= new IVRPromptsRepository(_context);
+                return _iVRPromptsRepository;
+            }
+        }
+
+        public IIVRMenusRepository IVRMenus
+        {
+            get
+            {
+                _iVRMenusRepository ??= new IVRMenusRepository(_context);
+                return _iVRMenusRepository;
+            }
+        }
+
+        public IIVRMenusOptionsRepository IVRMenusOptions
+        {
+            get
+            {
+                _iVRMenusOptionsRepository ??= new IVRMenusOptionsRepository(_context);
+                return _iVRMenusOptionsRepository;
+            }
+        }
 
 
 

@@ -46,6 +46,10 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         IAgentQueuesRepository AgentQueues { get; }
         ICallRecordRepository CallRecord { get; }
         ICallRecordingRepository CallRecordings { get; }
+        IIVRFlowsRepository IVRFlows { get; }
+        IIVRPromptsRepository IVRPrompts { get; }
+        IIVRMenusRepository IVRMenus { get; }
+        IIVRMenusOptionsRepository IVRMenusOptions { get; }
 
         // Add other repositories as needed
         // IUserRepository Users { get; }

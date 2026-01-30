@@ -53,6 +53,10 @@ namespace SaaS.Platform.API.Infrastructure.Data
         public DbSet<AgentQueues> AgentsQueues { get; set; }
         public DbSet<CallRecord> CallRecord { get; set; }
         public DbSet<CallRecordings> CallRecordings { get; set; }
+        public DbSet<IVRFlows> IVRFlows { get; set; }
+        public DbSet<IVRPrompts> IVRPrompts { get; set; }
+        public DbSet<IVRMenus> IVRMenus { get; set; }
+        public DbSet<IVRMenusOptions> IVRMenusOptions { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
