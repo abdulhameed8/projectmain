@@ -50,6 +50,7 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         IIVRPromptsRepository IVRPrompts { get; }
         IIVRMenusRepository IVRMenus { get; }
         IIVRMenusOptionsRepository IVRMenusOptions { get; }
+        IBranchesRepository Branches { get; }
 
         // Add other repositories as needed
         // IUserRepository Users { get; }

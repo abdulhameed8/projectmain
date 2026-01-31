@@ -42,7 +42,10 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         private IIVRPromptsRepository? _iVRPromptsRepository;
         private IIVRMenusRepository? _iVRMenusRepository;
         private IIVRMenusOptionsRepository? _iVRMenusOptionsRepository;
-            
+        private IIVRSessionsRepository? _iVRSessionsRepository;
+        private IBranchesRepository? _branchesRepository;
+
+
 
 
         public UnitOfWork(ApplicationDbContext context)
@@ -283,6 +286,24 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
                 return _iVRMenusOptionsRepository;
             }
         }
+
+        public IIVRSessionsRepository IVRSessions
+        {
+            get
+            {
+                _iVRSessionsRepository ??= new IVRSessionsRepository(_context);
+                return _iVRSessionsRepository;
+            }
+        }
+        public IBranchesRepository Branches
+        {
+            get
+            {
+                _branchesRepository ??= new BranchesRepository(_context);
+                return _branchesRepository;
+            }
+        }
+
 
 
 
