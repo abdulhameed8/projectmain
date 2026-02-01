@@ -59,6 +59,7 @@ namespace SaaS.Platform.API.Infrastructure.Data
         public DbSet<IVRMenusOptions> IVRMenusOptions { get; set; }
         public DbSet<IVRSessions> IVRSSessions { get; set; }
         public DbSet<Branches> Branches { get; set; }
+        public DbSet<AccountTypes> AccountTypes { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

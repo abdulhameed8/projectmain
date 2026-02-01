@@ -20,5 +20,6 @@ namespace SaaS.Platform.API.Infrastructure.Repositories.Interfaces
              string? segment = null,
             int pageNumber = 1,
             int pageSize = 10);
+        
     }
 }
