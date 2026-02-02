@@ -61,6 +61,7 @@ namespace SaaS.Platform.API.Infrastructure.Data
         public DbSet<Branches> Branches { get; set; }
         public DbSet<AccountTypes> AccountTypes { get; set; }
         public DbSet<BankAccounts> BankAccounts { get; set; }
+        public DbSet<Charges> Charges { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

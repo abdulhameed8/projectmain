@@ -52,6 +52,7 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         IBranchesRepository Branches { get; }
         IAccountTypesRepository AccountTypes { get; }
         IBankAccountsRepository BankAccounts { get; }
+        IChargesRepository Charges { get; }
 
              
 
