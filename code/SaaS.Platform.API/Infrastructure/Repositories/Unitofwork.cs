@@ -45,6 +45,7 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         private IIVRSessionsRepository? _iVRSessionsRepository;
         private IBranchesRepository? _branchesRepository;
         private IAccountTypesRepository? _accountTypesRepository;
+        private IBankAccountsRepository? _bankAccountsRepository;
 
 
 
@@ -315,6 +316,14 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
             }
         }
 
+        public IBankAccountsRepository BankAccounts
+        {
+            get
+            {
+                _bankAccountsRepository ??= new BankAccountsRepository(_context);
+                return _bankAccountsRepository;
+            }
+        }
 
 
 

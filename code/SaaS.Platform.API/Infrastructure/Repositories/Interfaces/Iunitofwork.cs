@@ -51,8 +51,9 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         IIVRMenusOptionsRepository IVRMenusOptions { get; }
         IBranchesRepository Branches { get; }
         IAccountTypesRepository AccountTypes { get; }
+        IBankAccountsRepository BankAccounts { get; }
 
-
+             
 
 
 
