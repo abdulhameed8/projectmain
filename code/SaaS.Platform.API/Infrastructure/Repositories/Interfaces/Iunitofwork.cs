@@ -53,7 +53,7 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         IAccountTypesRepository AccountTypes { get; }
         IBankAccountsRepository BankAccounts { get; }
         IChargesRepository Charges { get; }
-
+        ITransactionTypesRepository TransactionTypes { get; }
              
 
 
