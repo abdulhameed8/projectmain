@@ -1,4 +1,5 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Internal;
 using SaaS.Platform.API.Domain.Entities;
 using SaaS.Platform.API.Domain.Entities.Roles.cs;
 
@@ -63,6 +64,7 @@ namespace SaaS.Platform.API.Infrastructure.Data
         public DbSet<BankAccounts> BankAccounts { get; set; }
         public DbSet<Charges> Charges { get; set; }
         public DbSet<TransactionTypes> TransactionTypes { get; set; }
+        public DbSet<Beneficiaries> Beneficiaries { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {

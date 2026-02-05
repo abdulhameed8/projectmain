@@ -48,7 +48,7 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         private IBankAccountsRepository? _bankAccountsRepository;
         private IChargesRepository? _chargesRepository;
         private ITransactionTypesRepository? _transactionTypesRepository;
-
+        private IBeneficiariesRepository? _beneficiariesRepository;
 
 
 
@@ -344,6 +344,14 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
             {
                 _transactionTypesRepository ??= new TransactionTypesRepository(_context);
                 return _transactionTypesRepository;
+            }
+        }
+        public IBeneficiariesRepository Beneficiaries
+        {
+            get
+            {
+                _beneficiariesRepository ??= new BeneficiariesRepository(_context);
+                return _beneficiariesRepository;
             }
         }
 
