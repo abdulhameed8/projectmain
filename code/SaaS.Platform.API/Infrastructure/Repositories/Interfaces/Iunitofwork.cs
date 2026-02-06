@@ -56,6 +56,7 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         ITransactionTypesRepository TransactionTypes { get; }
         IBeneficiariesRepository Beneficiaries { get; }
         ITransactionsRepository Transactions { get; }
+        ICardsRepository Cards { get; }
              
 
 

@@ -50,6 +50,7 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         private ITransactionTypesRepository? _transactionTypesRepository;
         private IBeneficiariesRepository? _beneficiariesRepository;
         private ITransactionsRepository? _transactionRepository;
+        private ICardsRepository? _cardsRepository;
 
 
 
@@ -365,6 +366,14 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
             }
         }
 
+        public ICardsRepository Cards
+        {
+            get
+            {
+                _cardsRepository ??= new CardsRepository(_context);
+                return _cardsRepository;
+            }
+        }
 
         // Add other repositories as properties following the same pattern
         // public IUserRepository Users => _userRepository ??= new UserRepository(_context);
