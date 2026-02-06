@@ -5,8 +5,8 @@
         public Guid BeneficiaryId { get; set; }
         public Guid TenantId { get; set; }
         public Guid CustomerId { get; set; }
-        public string? BenificiaryName { get; set; }
-        public string? BenificiaryAccountNumber { get; set; }
+        public string? BeneficiaryName { get; set; }
+        public string? BeneficiaryAccountNumber { get; set; }
         public string? BankName { get; set; }
         public string BankCode { get; set; } = string.Empty;
         public string? IFSCCode { get; set; }
@@ -22,8 +22,8 @@
         public Guid BeneficiaryId { get; set; }
         public Guid TenantId { get; set; }
         public Guid CustomerId { get; set; }
-        public string? BenificiaryName { get; set; }
-        public string? BenificiaryAccountNumber { get; set; }
+        public string? BeneficiaryName { get; set; }
+        public string? BeneficiaryAccountNumber { get; set; }
         public string? BankName { get; set; }
         public string BankCode { get; set; } = string.Empty;
         public string? IFSCCode { get; set; }
@@ -40,8 +40,8 @@
         public Guid BeneficiaryId { get; set; }
         public Guid TenantId { get; set; }
         public Guid CustomerId { get; set; }
-        public string? BenificiaryName { get; set; }
-        public string? BenificiaryAccountNumber { get; set; }
+        public string? BeneficiaryName { get; set; }
+        public string? BeneficiaryAccountNumber { get; set; }
         public string? BankName { get; set; }
         public string BankCode { get; set; } = string.Empty;
         public string? IFSCCode { get; set; }

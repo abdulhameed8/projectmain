@@ -33,11 +33,11 @@ namespace SaaS.Platform.API.Application.Validators
             // Corporate customer validation
             When(x => x.BeneficiaryType == "Corporate", () =>
             {
-                RuleFor(x => x.BankName)
+                RuleFor(x => x.BeneficiaryName)
                     .NotEmpty()
-                    .WithMessage("Bank name is required for corporate customers")
+                    .WithMessage("Beneficiary name is required for corporate customers")
                     .MaximumLength(200)
-                    .WithMessage("Bank name cannot exceed 200 characters");
+                    .WithMessage("Beneficiary name cannot exceed 200 characters");
             });
 
            
@@ -53,10 +53,10 @@ namespace SaaS.Platform.API.Application.Validators
         {
            
 
-            RuleFor(x => x.BankName)
+            RuleFor(x => x.BeneficiaryName)
                 .MaximumLength(200)
-                .WithMessage("Bank name cannot exceed 200 characters")
-                .When(x => !string.IsNullOrWhiteSpace(x.BankName));
+                .WithMessage("Beneficiary name cannot exceed 200 characters")
+                .When(x => !string.IsNullOrWhiteSpace(x.BeneficiaryName));
 
             
         }
