@@ -55,6 +55,7 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         IChargesRepository Charges { get; }
         ITransactionTypesRepository TransactionTypes { get; }
         IBeneficiariesRepository Beneficiaries { get; }
+        ITransactionsRepository Transactions { get; }
              
 
 
