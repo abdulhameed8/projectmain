@@ -67,6 +67,7 @@ namespace SaaS.Platform.API.Infrastructure.Data
         public DbSet<Beneficiaries> Beneficiaries { get; set; }
         public DbSet<Transactions> Transactions { get; set; }
         public DbSet<Cards> Cards { get; set; }
+        public DbSet<Loans> Loans { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);
