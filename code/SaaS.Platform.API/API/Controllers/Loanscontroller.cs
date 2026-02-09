@@ -112,7 +112,7 @@ namespace SaaS.Platform.API.API.Controllers
                 if (loan == null)
                 {
                     _logger.LogWarning("Loan with ID {LoanId} not found", id);
-                    return NotFound(new ApiResponse<object>($"LOan with ID {id} not found"));
+                    return NotFound(new ApiResponse<object>($"Loan with ID {id} not found"));
                 }
 
                 var loanDto = _mapper.Map<Loansdto>(loan);
@@ -172,7 +172,7 @@ namespace SaaS.Platform.API.API.Controllers
                 return CreatedAtAction(
                     nameof(GetLoansById),
                     new { id = loan.LoanId },
-                    new ApiResponse<Loansdto>(loanDto, "Card created successfully"));
+                    new ApiResponse<Loansdto>(loanDto, "Loan created successfully"));
             }
             catch (Exception ex)
             {
@@ -209,7 +209,7 @@ namespace SaaS.Platform.API.API.Controllers
                     return BadRequest(new ApiResponse<object>("Validation failed", errors));
                 }
 
-                // Get existing card
+                // Get existing loan
                 var existingLoan = await _unitOfWork.Loans.GetByIdAsync(id);
                 if (existingLoan == null)
                 {
@@ -289,7 +289,7 @@ namespace SaaS.Platform.API.API.Controllers
         [HttpGet("search")]
         [ProducesResponseType(typeof(ApiResponse<List<Loansdto>>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ApiResponse<object>), StatusCodes.Status400BadRequest)]
-        public async Task<ActionResult<ApiResponse<List<Loansdto>>>> SearchCards(
+        public async Task<ActionResult<ApiResponse<List<Loansdto>>>> SearchLoans(
             [FromQuery] Guid tenantId,
             [FromQuery] string searchTerm)
         {
