@@ -59,6 +59,8 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         ICardsRepository Cards { get; }
         ILoansRepository Loans { get; }
 
+        ILoanTypesRepository LoanTypes { get; }
+
 
 
 

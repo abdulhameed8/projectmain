@@ -2,7 +2,6 @@
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using SaaS.Platform.API.Application.Common;
-using SaaS.Platform.API.Application.DTOs.Cards;
 using SaaS.Platform.API.Application.DTOs.Loans;
 using SaaS.Platform.API.Domain.Entities;
 using SaaS.Platform.API.Infrastructure.UnitOfWork;
