@@ -60,6 +60,7 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         ILoansRepository Loans { get; }
 
         ILoanTypesRepository LoanTypes { get; }
+        ILoanRepaymentsRepository LoanRepayments { get; }
 
 
 

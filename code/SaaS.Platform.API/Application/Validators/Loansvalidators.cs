@@ -1,5 +1,4 @@
 ﻿using FluentValidation;
-using SaaS.Platform.API.Application.DTOs.Customer;
 using SaaS.Platform.API.Application.DTOs.Loans;
 
 namespace SaaS.Platform.API.Application.Validators

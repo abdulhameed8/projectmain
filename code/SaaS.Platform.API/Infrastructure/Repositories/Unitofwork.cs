@@ -53,7 +53,7 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         private ICardsRepository? _cardsRepository;
         private ILoansRepository? _loansRepository;
         private ILoanTypesRepository? _loanTypesRepository;
-
+        private ILoanRepaymentsRepository? _loanRepaymentsRepository;
 
 
 
@@ -394,6 +394,29 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
                 return _loanTypesRepository;
             }
         }
+
+        public ILoanRepaymentsRepository LoanRepayments
+        {
+            get
+            {
+                _loanRepaymentsRepository ??= new LoanRepaymentsRepository(_context);
+                return _loanRepaymentsRepository;
+            }
+        }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
         // Add other repositories as properties following the same pattern
         // public IUserRepository Users => _userRepository ??= new UserRepository(_context);
 
