@@ -57,6 +57,7 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         private ISubscriptionsRepository? _subscriptionsRepository;
         private IPaymentMethodsRepository? _paymentMethodsRepository;
         private IInvoicesRepository? _invoicesRepository;
+        private IInvoiceLineItemsRepository? _invoiceLineItemsRepository;
 
 
 
@@ -436,6 +437,14 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
             }
         }
 
+        public IInvoiceLineItemsRepository InvoiceLineItems
+        {
+            get
+            {
+                _invoiceLineItemsRepository ??= new InvoiceLineItemsRepository(_context);
+                return _invoiceLineItemsRepository;
+            }
+        }
 
 
 

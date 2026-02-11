@@ -18,7 +18,7 @@ namespace SaaS.Platform.API.Application.Mappings
                 .ForMember(dest => dest.InvoiceId, opt => opt.Ignore())
                 .ForMember(dest => dest.CreatedDate, opt => opt.Ignore())
                 .ForMember(dest => dest.CreatedBy, opt => opt.Ignore());
-                
+
 
             // Update DTO to Entity
             CreateMap<UpdateInvoicesdto, Invoices>()
