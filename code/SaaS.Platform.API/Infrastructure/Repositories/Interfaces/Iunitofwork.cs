@@ -63,6 +63,8 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         ILoanRepaymentsRepository LoanRepayments { get; }
         ISubscriptionsRepository Subscriptions { get; }
         IPaymentMethodsRepository PaymentMethods { get; }
+        
+        IInvoicesRepository Invoices { get; }
 
 
 
