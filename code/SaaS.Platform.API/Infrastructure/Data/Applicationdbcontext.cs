@@ -70,6 +70,10 @@ namespace SaaS.Platform.API.Infrastructure.Data
         public DbSet<Loans> Loans { get; set; }
         public DbSet<LoanTypes> LoanTypes { get; set; }
         public DbSet<LoanRepayments> LoanRepayments { get; set; }
+        public DbSet<Subscriptions> Subscriptions { get; set; }
+
+
+
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

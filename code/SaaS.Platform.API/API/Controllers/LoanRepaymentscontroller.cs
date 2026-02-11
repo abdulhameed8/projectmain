@@ -45,9 +45,9 @@ namespace SaaS.Platform.API.API.Controllers
         /// <param name="id">Loan ID</param>
         /// <returns>LoanRepayment details</returns>
         [HttpGet("{id}")]
-        [ProducesResponseType(typeof(ApiResponse<Loansdto>), StatusCodes.Status200OK)]
+        [ProducesResponseType(typeof(ApiResponse<LoanRepaymentsdto>), StatusCodes.Status200OK)]
         [ProducesResponseType(typeof(ApiResponse<object>), StatusCodes.Status404NotFound)]
-        public async Task<ActionResult<ApiResponse<Loansdto>>> GetLoanById(Guid id)
+        public async Task<ActionResult<ApiResponse<LoanRepaymentsdto>>> GetLoanById(Guid id)
         {
             try
             {

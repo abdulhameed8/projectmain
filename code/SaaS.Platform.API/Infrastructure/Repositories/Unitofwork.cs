@@ -54,6 +54,7 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         private ILoansRepository? _loansRepository;
         private ILoanTypesRepository? _loanTypesRepository;
         private ILoanRepaymentsRepository? _loanRepaymentsRepository;
+        private ISubscriptionsRepository? _subscriptionsRepository;
 
 
 
@@ -405,6 +406,14 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         }
 
 
+        public ISubscriptionsRepository Subscriptions
+        {
+            get
+            {
+                _subscriptionsRepository ??= new SubscriptionsRepository(_context);
+                return _subscriptionsRepository;
+            }
+        }
 
 
 
