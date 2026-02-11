@@ -71,6 +71,7 @@ namespace SaaS.Platform.API.Infrastructure.Data
         public DbSet<LoanTypes> LoanTypes { get; set; }
         public DbSet<LoanRepayments> LoanRepayments { get; set; }
         public DbSet<Subscriptions> Subscriptions { get; set; }
+        public DbSet<PaymentMethods> PaymentMethods { get; set; }
 
 
 

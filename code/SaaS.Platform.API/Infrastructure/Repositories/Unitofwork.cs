@@ -55,6 +55,7 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         private ILoanTypesRepository? _loanTypesRepository;
         private ILoanRepaymentsRepository? _loanRepaymentsRepository;
         private ISubscriptionsRepository? _subscriptionsRepository;
+        private IPaymentMethodsRepository? _paymentMethodsRepository;
 
 
 
@@ -415,8 +416,14 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
             }
         }
 
-
-
+        public IPaymentMethodsRepository PaymentMethods
+        {
+            get
+            {
+                _paymentMethodsRepository ??= new PaymentMethodsRepository(_context);
+                return _paymentMethodsRepository;
+            }
+        }
 
 
 
