@@ -66,6 +66,7 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         
         IInvoicesRepository Invoices { get; }
         IInvoiceLineItemsRepository InvoiceLineItems { get; }
+        IPaymentsRepository Payments { get; }
 
 
 

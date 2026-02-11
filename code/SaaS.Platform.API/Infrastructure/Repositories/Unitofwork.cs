@@ -58,6 +58,7 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         private IPaymentMethodsRepository? _paymentMethodsRepository;
         private IInvoicesRepository? _invoicesRepository;
         private IInvoiceLineItemsRepository? _invoiceLineItemsRepository;
+        private IPaymentsRepository? _paymentsRepository;
 
 
 
@@ -445,6 +446,16 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
                 return _invoiceLineItemsRepository;
             }
         }
+
+        public IPaymentsRepository Payments
+        {
+            get
+            {
+                _paymentsRepository ??= new PaymentsRepository(_context);
+                return _paymentsRepository;
+            }
+        }
+
 
 
 

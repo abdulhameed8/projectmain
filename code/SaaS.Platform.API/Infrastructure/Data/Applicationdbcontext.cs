@@ -73,6 +73,7 @@ namespace SaaS.Platform.API.Infrastructure.Data
         public DbSet<Subscriptions> Subscriptions { get; set; }
         public DbSet<PaymentMethods> PaymentMethods { get; set; }
         public DbSet<Invoices> Invoices { get; set; }
+        public DbSet<Payments> Payments { get; set; }
 
 
 
