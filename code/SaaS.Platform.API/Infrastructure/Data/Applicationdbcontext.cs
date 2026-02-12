@@ -75,6 +75,7 @@ namespace SaaS.Platform.API.Infrastructure.Data
         public DbSet<Invoices> Invoices { get; set; }
         public DbSet<Payments> Payments { get; set; }
         public DbSet<WorkflowDefinitions> WorkflowDefinitions { get; set; }
+        public DbSet<WorkflowInstances> WorkflowInstances { get; set; }
 
 
 

@@ -60,6 +60,8 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         private IInvoiceLineItemsRepository? _invoiceLineItemsRepository;
         private IPaymentsRepository? _paymentsRepository;
         private IWorkflowDefinitionsRepository? _workflowDefinitionsRepository;
+        private IWorkflowInstancesRepository? _workflowInstancesRepository;
+
 
 
 
@@ -463,6 +465,15 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
             {
                 _workflowDefinitionsRepository ??= new WorkflowDefinitionsRepository(_context);
                 return _workflowDefinitionsRepository;
+            }
+        }
+
+        public IWorkflowInstancesRepository WorkflowInstances
+        {
+            get
+            {
+                _workflowInstancesRepository ??= new WorkflowInstancesRepository(_context);
+                return _workflowInstancesRepository;
             }
         }
 
