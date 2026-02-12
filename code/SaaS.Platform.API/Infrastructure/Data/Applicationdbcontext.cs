@@ -77,6 +77,7 @@ namespace SaaS.Platform.API.Infrastructure.Data
         public DbSet<WorkflowDefinitions> WorkflowDefinitions { get; set; }
         public DbSet<WorkflowInstances> WorkflowInstances { get; set; }
         public DbSet<WorkflowTasks> WorkflowTasks { get; set; }
+        public DbSet<WorkflowHistory> WorkflowHistory { get; set; }
 
 
 

@@ -69,6 +69,7 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         IPaymentsRepository Payments { get; }
         IWorkflowDefinitionsRepository  WorkflowDefinitions { get; }
         IWorkflowTaskRepository WorkflowTask { get; }
+        IWorkflowHistoryRepository WorkflowHistory { get; }
 
 
 

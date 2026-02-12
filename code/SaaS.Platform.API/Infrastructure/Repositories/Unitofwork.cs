@@ -62,6 +62,8 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         private IWorkflowDefinitionsRepository? _workflowDefinitionsRepository;
         private IWorkflowInstancesRepository? _workflowInstancesRepository;
         private IWorkflowTaskRepository? _workflowTaskRepository;
+        private IWorkflowHistoryRepository? _workflowHistoryRepository;
+
 
 
 
@@ -487,6 +489,14 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
             }
         }
 
+        public IWorkflowHistoryRepository WorkflowHistory
+        {
+            get
+            {
+                _workflowHistoryRepository ??= new WorkflowHistoryRepository(_context);
+                return _workflowHistoryRepository;
+            }
+        }
 
 
 
