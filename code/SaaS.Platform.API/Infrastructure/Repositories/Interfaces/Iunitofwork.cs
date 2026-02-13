@@ -63,13 +63,16 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         ILoanRepaymentsRepository LoanRepayments { get; }
         ISubscriptionsRepository Subscriptions { get; }
         IPaymentMethodsRepository PaymentMethods { get; }
-        
         IInvoicesRepository Invoices { get; }
         IInvoiceLineItemsRepository InvoiceLineItems { get; }
         IPaymentsRepository Payments { get; }
         IWorkflowDefinitionsRepository  WorkflowDefinitions { get; }
         IWorkflowTaskRepository WorkflowTask { get; }
         IWorkflowHistoryRepository WorkflowHistory { get; }
+        INotificationTempletesRepository NotificationTempletes { get; }
+        INotificationsRepository Notifications { get; }
+        ISystemSettingsRepository SystemSettings { get; }
+        IEmailConfigurationsRepository EmailConfigurations { get; }
 
 
 

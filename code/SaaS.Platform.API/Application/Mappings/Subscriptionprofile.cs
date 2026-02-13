@@ -1,5 +1,5 @@
-﻿using AutoMapper;
-using SaaS.Platform.API.Application.DTOs.Subscriptions;
+﻿using SaaS.Platform.API.Application.DTOs.Subscriptions;
+ using AutoMapper;
 using SaaS.Platform.API.Domain.Entities;
 
 namespace SaaS.Platform.API.Application.Mappings

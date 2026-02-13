@@ -63,6 +63,13 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         private IWorkflowInstancesRepository? _workflowInstancesRepository;
         private IWorkflowTaskRepository? _workflowTaskRepository;
         private IWorkflowHistoryRepository? _workflowHistoryRepository;
+        private INotificationTempletesRepository? _notificationTempletesRepository;
+        private INotificationsRepository? _notificationsRepository;
+        private ISystemSettingsRepository? _systemSettingsRepository;
+        private IEmailConfigurationsRepository? _emailConfigurationsRepository;
+
+
+
 
 
 
@@ -497,9 +504,40 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
                 return _workflowHistoryRepository;
             }
         }
+        public INotificationTempletesRepository  NotificationTempletes
+        {
+            get
+            {
+                _notificationTempletesRepository ??= new NotificationTempletesRepository(_context);
+                return _notificationTempletesRepository;
+            }
+        }
 
+        public INotificationsRepository Notifications
+        {
+            get
+            {
+                _notificationsRepository ??= new NotificationsRepository(_context);
+                return _notificationsRepository;
+            }
+        }
+        public ISystemSettingsRepository SystemSettings
+        {
+            get
+            {
+                _systemSettingsRepository ??= new SystemSettingsRepository(_context);
+                return _systemSettingsRepository;
+            }
+        }
 
-
+        public IEmailConfigurationsRepository EmailConfigurations
+        {
+            get
+            {
+                _emailConfigurationsRepository ??= new EmailConfigurationsRepository(_context);
+                return _emailConfigurationsRepository;
+            }
+        }
 
 
 

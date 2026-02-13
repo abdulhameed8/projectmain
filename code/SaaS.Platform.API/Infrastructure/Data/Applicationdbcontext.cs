@@ -78,7 +78,10 @@ namespace SaaS.Platform.API.Infrastructure.Data
         public DbSet<WorkflowInstances> WorkflowInstances { get; set; }
         public DbSet<WorkflowTasks> WorkflowTasks { get; set; }
         public DbSet<WorkflowHistory> WorkflowHistory { get; set; }
-
+        public DbSet<NotificationTempletes> NotificationTempletes { get; set; }
+        public DbSet<Notifications> Notifications { get; set; }
+        public DbSet<SystemSettings> SystemSettings { get; set; }
+        public DbSet<EmailConfigurations> EmailConfigurations { get; set; }
 
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
