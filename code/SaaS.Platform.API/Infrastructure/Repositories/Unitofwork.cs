@@ -487,7 +487,7 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
             }
         }
 
-        public IWorkflowTaskRepository WorkflowTask
+        public IWorkflowTaskRepository WorkflowTasks
         {
             get
             {

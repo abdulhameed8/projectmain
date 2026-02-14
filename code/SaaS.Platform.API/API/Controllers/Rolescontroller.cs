@@ -2,7 +2,6 @@
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using SaaS.Platform.API.Application.Common;
-using SaaS.Platform.API.Application.DTOs.Customer;
 using SaaS.Platform.API.Application.DTOs.Roles;
 using SaaS.Platform.API.Domain.Entities;
 using SaaS.Platform.API.Domain.Entities.Roles.cs;
@@ -270,7 +269,7 @@ namespace SaaS.Platform.API.API.Controllers
             }
             catch (Exception ex)
             {
-                _logger.LogError(ex, "Error occurred while deleting customer {CustomerId}", id);
+                _logger.LogError(ex, "Error occurred while deleting roles {RoleId}", id);
                 throw;
             }
         }

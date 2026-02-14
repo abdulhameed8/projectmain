@@ -67,7 +67,7 @@ namespace SaaS.Platform.API.Infrastructure.UnitOfWork
         IInvoiceLineItemsRepository InvoiceLineItems { get; }
         IPaymentsRepository Payments { get; }
         IWorkflowDefinitionsRepository  WorkflowDefinitions { get; }
-        IWorkflowTaskRepository WorkflowTask { get; }
+        IWorkflowTaskRepository WorkflowTasks { get; }
         IWorkflowHistoryRepository WorkflowHistory { get; }
         INotificationTempletesRepository NotificationTempletes { get; }
         INotificationsRepository Notifications { get; }

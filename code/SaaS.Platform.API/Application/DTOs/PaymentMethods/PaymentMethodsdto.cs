@@ -25,7 +25,7 @@
         public int ExpiryMonth { get; set; }
         public int ExpiryYear { get; set; }
         public bool IsDefault { get; set; }
-        public bool? Isactive { get; set; } 
+        public bool? IsActive { get; set; } 
         public DateTime CreatedDate { get; set; }
         public Guid? CreatedBy { get; set; }
     }

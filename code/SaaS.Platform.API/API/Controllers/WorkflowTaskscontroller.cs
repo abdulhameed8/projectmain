@@ -2,7 +2,6 @@
 using FluentValidation;
 using Microsoft.AspNetCore.Mvc;
 using SaaS.Platform.API.Application.Common;
-using SaaS.Platform.API.Application.DTOs.Customer;
 using SaaS.Platform.API.Application.DTOs.WorkflowTask;
 using SaaS.Platform.API.Domain.Entities;
 using SaaS.Platform.API.Infrastructure.UnitOfWork;
@@ -50,7 +49,7 @@ namespace SaaS.Platform.API.API.Controllers
             {
                 _logger.LogInformation("Fetching workflowTask with ID: {WorkflowTaskId}", id);
 
-                var workflowTask = await _unitOfWork.WorkflowTask.GetByIdAsync(id);
+                var workflowTask = await _unitOfWork.WorkflowTasks.GetByIdAsync(id);
 
                 if (workflowTask == null)
                 {

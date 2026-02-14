@@ -5,7 +5,7 @@ using SaaS.Platform.API.Application.DTOs.Payment;
 namespace SaaS.Platform.API.Application.Validators
 {
     /// <summary>
-    /// Validator for CreateCustomerDto with business rules
+    /// Validator for CreatePaymentDto with business rules
     /// </summary>
     public class CreatePaymentsdtoValidator : AbstractValidator<CreatePaymentsdto>
     {
@@ -23,7 +23,7 @@ namespace SaaS.Platform.API.Application.Validators
     }
 
     /// <summary>
-    /// Validator for UpdatePaymentMethodto with business rules
+    /// Validator for UpdatePaymentto with business rules
     /// </summary>
     public class UpdatePaymentsdtoValidator : AbstractValidator<UpdatePaymentsdto>
     {
